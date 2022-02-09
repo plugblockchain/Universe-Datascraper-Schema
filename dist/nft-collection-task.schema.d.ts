@@ -1,12 +1,6 @@
 import { SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-export declare enum MessageStatus {
-    sent = "sent",
-    processing = "processing",
-    done = "done",
-    error = "error",
-    split = "split"
-}
+import { MessageStatus } from './types';
 export declare class NFTCollectionTask {
     messageId: string;
     contractAddress: string;

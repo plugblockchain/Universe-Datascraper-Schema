@@ -9,41 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTCollectionTaskSchema = exports.NFTCollectionTask = void 0;
+exports.NFTBlockTaskSchema = exports.NFTBlockTask = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const types_1 = require("./types");
-let NFTCollectionTask = class NFTCollectionTask {
+let NFTBlockTask = class NFTBlockTask {
 };
 __decorate([
     (0, mongoose_1.Prop)({ index: true, require: true }),
     __metadata("design:type", String)
-], NFTCollectionTask.prototype, "messageId", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
-    __metadata("design:type", String)
-], NFTCollectionTask.prototype, "contractAddress", void 0);
+], NFTBlockTask.prototype, "messageId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ index: true, required: true }),
     __metadata("design:type", Number)
-], NFTCollectionTask.prototype, "startBlock", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true }),
-    __metadata("design:type", Number)
-], NFTCollectionTask.prototype, "endBlock", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
-    __metadata("design:type", String)
-], NFTCollectionTask.prototype, "tokenType", void 0);
+], NFTBlockTask.prototype, "blockNum", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
         index: true,
         required: true,
     }),
     __metadata("design:type", String)
-], NFTCollectionTask.prototype, "status", void 0);
-NFTCollectionTask = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-collection-tasks' })
-], NFTCollectionTask);
-exports.NFTCollectionTask = NFTCollectionTask;
-exports.NFTCollectionTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTCollectionTask);
-//# sourceMappingURL=nft-collection-task.schema.js.map
+], NFTBlockTask.prototype, "status", void 0);
+NFTBlockTask = __decorate([
+    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-block-tasks' })
+], NFTBlockTask);
+exports.NFTBlockTask = NFTBlockTask;
+exports.NFTBlockTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTBlockTask);
+//# sourceMappingURL=nft-block-task.schema.js.map

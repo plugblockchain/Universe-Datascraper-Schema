@@ -14,4 +14,5 @@ __exportStar(require("./nft-collection-task.schema"), exports);
 __exportStar(require("./nft-collection.schema"), exports);
 __exportStar(require("./nft-tokens.schema"), exports);
 __exportStar(require("./nft-transfer-history.schema"), exports);
+__exportStar(require("./nft-block-task.schema"), exports);
 //# sourceMappingURL=index.js.map

@@ -1,13 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { MessageStatus } from './types';
 
-export enum MessageStatus {
-  sent = 'sent',
-  processing = 'processing',
-  done = 'done',
-  error = 'error',
-  split = 'split',
-}
 
 @Schema({ timestamps: true, collection: 'nft-collection-tasks' })
 export class NFTCollectionTask {
