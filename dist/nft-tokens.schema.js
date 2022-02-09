@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTTokensSchema = exports.NFTTokens = exports.Owner = void 0;
+exports.NFTTokensSchema = exports.NFTToken = exports.Owner = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 class Owner {
 }
@@ -26,55 +26,55 @@ __decorate([
     __metadata("design:type", Number)
 ], Owner.prototype, "value", void 0);
 exports.Owner = Owner;
-let NFTTokens = class NFTTokens {
+let NFTToken = class NFTToken {
 };
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokens.prototype, "contractAddress", void 0);
+], NFTToken.prototype, "contractAddress", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokens.prototype, "tokenId", void 0);
+], NFTToken.prototype, "tokenId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ index: true, required: true, enum: ['ERC721', 'ERC1155'] }),
     __metadata("design:type", String)
-], NFTTokens.prototype, "tokenType", void 0);
+], NFTToken.prototype, "tokenType", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], NFTTokens.prototype, "externalDomainViewUrl", void 0);
+], NFTToken.prototype, "externalDomainViewUrl", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
-], NFTTokens.prototype, "metadata", void 0);
+], NFTToken.prototype, "metadata", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], NFTTokens.prototype, "firstOwner", void 0);
+], NFTToken.prototype, "firstOwner", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], NFTTokens.prototype, "latestOwner", void 0);
+], NFTToken.prototype, "latestOwner", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
-], NFTTokens.prototype, "owners", void 0);
+], NFTToken.prototype, "owners", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], NFTTokens.prototype, "metadataFetchError", void 0);
+], NFTToken.prototype, "metadataFetchError", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
-], NFTTokens.prototype, "sentAt", void 0);
+], NFTToken.prototype, "sentAt", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
-], NFTTokens.prototype, "alternativeMediaFiles", void 0);
-NFTTokens = __decorate([
+], NFTToken.prototype, "alternativeMediaFiles", void 0);
+NFTToken = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-tokens' })
-], NFTTokens);
-exports.NFTTokens = NFTTokens;
-exports.NFTTokensSchema = mongoose_1.SchemaFactory.createForClass(NFTTokens);
+], NFTToken);
+exports.NFTToken = NFTToken;
+exports.NFTTokensSchema = mongoose_1.SchemaFactory.createForClass(NFTToken);
 //# sourceMappingURL=nft-tokens.schema.js.map

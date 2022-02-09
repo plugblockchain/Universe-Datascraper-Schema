@@ -5,7 +5,7 @@ export declare class Owner {
     transactionHash: string;
     value: number;
 }
-export declare class NFTTokens {
+export declare class NFTToken {
     contractAddress: string;
     tokenId: string;
     tokenType: string;
@@ -18,5 +18,5 @@ export declare class NFTTokens {
     sentAt: Date;
     alternativeMediaFiles: any;
 }
-export declare type NFTTokensDocument = NFTTokens & Document;
+export declare type NFTTokensDocument = NFTToken & Document;
 export declare const NFTTokensSchema: SchemaFactory;

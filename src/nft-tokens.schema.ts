@@ -13,7 +13,7 @@ export class Owner {
 }
 
 @Schema({ timestamps: true, collection: 'nft-tokens' })
-export class NFTTokens {
+export class NFTToken {
   @Prop({ trim: true, index: true, required: true })
   public contractAddress: string;
 
@@ -48,7 +48,7 @@ export class NFTTokens {
   public alternativeMediaFiles: any;
 }
 
-export type NFTTokensDocument = NFTTokens & Document;
+export type NFTTokensDocument = NFTToken & Document;
 
 export const NFTTokensSchema: SchemaFactory =
-  SchemaFactory.createForClass(NFTTokens);
+  SchemaFactory.createForClass(NFTToken);
