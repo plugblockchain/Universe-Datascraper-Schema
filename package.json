@@ -19,5 +19,8 @@
     "mongoose": "^6.1.6",
     "mongoose-unique-validator": "^3.0.0"
   },
-  "stableVersion": "0.0.1"
+  "stableVersion": "0.0.1",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
 }

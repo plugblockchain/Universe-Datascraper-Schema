@@ -50,7 +50,7 @@ __decorate([
     __metadata("design:type", Object)
 ], NFTTransferHistory.prototype, "cryptopunks", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true, enum: ['ERC721', 'ERC1155'] }),
+    (0, mongoose_1.Prop)({ index: true, required: true, enum: ['ERC721', 'ERC1155', 'CryptoPunks'] }),
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "category", void 0);
 __decorate([
