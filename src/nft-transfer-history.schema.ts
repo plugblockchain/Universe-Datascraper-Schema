@@ -30,7 +30,7 @@ export class NFTTransferHistory {
   @Prop({ type: 'object' })
   public cryptopunks: any;
 
-  @Prop({ index: true, required: true, enum: ['ERC721', 'ERC1155'] })
+  @Prop({ index: true, required: true, enum: ['ERC721', 'ERC1155', 'CryptoPunks'] })
   public category: string;
 
   @Prop()
