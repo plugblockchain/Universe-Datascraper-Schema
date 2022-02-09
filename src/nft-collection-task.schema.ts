@@ -6,7 +6,7 @@ export enum MessageStatus {
   processing = 'processing',
   done = 'done',
   error = 'error',
-  splitted = 'splitted',
+  split = 'split',
 }
 
 @Schema({ timestamps: true, collection: 'nft-collection-tasks' })
@@ -17,14 +17,14 @@ export class NFTCollectionTask {
   @Prop({ trim: true, index: true, required: true })
   public contractAddress: string;
 
-  @Prop({ trim: true, index: true, required: true })
-  public tokenType: 'ERC721' | 'ERC1155';
-
   @Prop({ index: true, required: true })
   public startBlock: number;
 
   @Prop({ index: true, required: true })
   public endBlock: number;
+
+  @Prop({ trim: true, index: true, required: true })
+  public tokenType: 'ERC721' | 'ERC1155';
 
   @Prop({
     index: true,

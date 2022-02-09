@@ -1,13 +1,19 @@
 import { SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+export declare class Owner {
+    address: string;
+    transactionHash: string;
+    value: number;
+}
 export declare class NFTTokens {
-    readonly _id: string;
     contractAddress: string;
     tokenId: string;
     tokenType: string;
     externalDomainViewUrl: string;
     metadata: any;
     firstOwner: string;
+    latestOwner: string;
+    owners: Owner[];
     metadataFetchError: string;
     sentAt: Date;
     alternativeMediaFiles: any;

@@ -9,14 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTTokensSchema = exports.NFTTokens = void 0;
+exports.NFTTokensSchema = exports.NFTTokens = exports.Owner = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
+class Owner {
+}
+__decorate([
+    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    __metadata("design:type", String)
+], Owner.prototype, "address", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    __metadata("design:type", String)
+], Owner.prototype, "transactionHash", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", Number)
+], Owner.prototype, "value", void 0);
+exports.Owner = Owner;
 let NFTTokens = class NFTTokens {
 };
-__decorate([
-    (0, mongoose_1.Prop)({ _id: true }),
-    __metadata("design:type", String)
-], NFTTokens.prototype, "_id", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
@@ -41,6 +52,14 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], NFTTokens.prototype, "firstOwner", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTTokens.prototype, "latestOwner", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Array)
+], NFTTokens.prototype, "owners", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)

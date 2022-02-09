@@ -5,14 +5,14 @@ export declare enum MessageStatus {
     processing = "processing",
     done = "done",
     error = "error",
-    splitted = "splitted"
+    split = "split"
 }
 export declare class NFTCollectionTask {
     messageId: string;
     contractAddress: string;
-    tokenType: 'ERC721' | 'ERC1155';
     startBlock: number;
     endBlock: number;
+    tokenType: 'ERC721' | 'ERC1155';
     status: MessageStatus;
 }
 export declare type NFTCollectionTaskDocument = NFTCollectionTask & Document;

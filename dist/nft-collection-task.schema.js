@@ -17,7 +17,7 @@ var MessageStatus;
     MessageStatus["processing"] = "processing";
     MessageStatus["done"] = "done";
     MessageStatus["error"] = "error";
-    MessageStatus["splitted"] = "splitted";
+    MessageStatus["split"] = "split";
 })(MessageStatus = exports.MessageStatus || (exports.MessageStatus = {}));
 let NFTCollectionTask = class NFTCollectionTask {
 };
@@ -30,10 +30,6 @@ __decorate([
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "contractAddress", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
-    __metadata("design:type", String)
-], NFTCollectionTask.prototype, "tokenType", void 0);
-__decorate([
     (0, mongoose_1.Prop)({ index: true, required: true }),
     __metadata("design:type", Number)
 ], NFTCollectionTask.prototype, "startBlock", void 0);
@@ -41,6 +37,10 @@ __decorate([
     (0, mongoose_1.Prop)({ index: true, required: true }),
     __metadata("design:type", Number)
 ], NFTCollectionTask.prototype, "endBlock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    __metadata("design:type", String)
+], NFTCollectionTask.prototype, "tokenType", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
         index: true,

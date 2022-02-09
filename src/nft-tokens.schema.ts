@@ -1,11 +1,19 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
+export class Owner {
+  @Prop({ trim: true, index: true, required: true })
+  address: string;
+
+  @Prop({ trim: true, index: true, required: true })
+  transactionHash: string;
+
+  @Prop({ required: true })
+  value: number;
+}
+
 @Schema({ timestamps: true, collection: 'nft-tokens' })
 export class NFTTokens {
-  @Prop({ _id: true })
-  public readonly _id: string;
-
   @Prop({ trim: true, index: true, required: true })
   public contractAddress: string;
 
@@ -23,6 +31,12 @@ export class NFTTokens {
 
   @Prop()
   public firstOwner: string;
+
+  @Prop()
+  public latestOwner: string;
+
+  @Prop()
+  public owners: Owner[];
 
   @Prop()
   public metadataFetchError: string;
