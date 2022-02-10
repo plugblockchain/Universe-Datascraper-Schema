@@ -37,11 +37,15 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
+], NFTTransferHistory.prototype, "tokenId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "value", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], NFTTransferHistory.prototype, "erc721Tokenid", void 0);
+], NFTTransferHistory.prototype, "erc721TokenId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: 'object' }),
     __metadata("design:type", Object)

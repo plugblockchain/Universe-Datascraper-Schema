@@ -33,9 +33,8 @@ export class NFTToken {
   @Prop()
   public firstOwner: string;
 
-  @Prop()
-  public latestOwner: string;
-
+  //ERC721 and Cryptopunks only have 1 owner
+  //ERC1155 can have multiple owners
   @Prop()
   public owners: Owner[];
 
