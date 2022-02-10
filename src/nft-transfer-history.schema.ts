@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { SupportedTokenTypes } from './types';
 
 @Schema({ timestamps: true, collection: 'nft-transfer-histories' })
 export class NFTTransferHistory {
@@ -30,7 +31,7 @@ export class NFTTransferHistory {
   @Prop({ type: 'object' })
   public cryptopunks: any;
 
-  @Prop({ index: true, required: true, enum: ['ERC721', 'ERC1155', 'CryptoPunks'] })
+  @Prop({ index: true, required: true, enum: SupportedTokenTypes })
   public category: string;
 
   @Prop()
