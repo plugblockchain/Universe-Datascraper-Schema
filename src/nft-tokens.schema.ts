@@ -44,6 +44,9 @@ export class NFTToken {
   @Prop()
   public sentAt: Date;
 
+  @Prop()
+  public sentForMediaAt: Date;
+
   @Prop({ type: Object })
   public alternativeMediaFiles: any;
 }

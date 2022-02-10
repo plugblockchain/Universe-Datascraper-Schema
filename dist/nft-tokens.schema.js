@@ -66,6 +66,10 @@ __decorate([
     __metadata("design:type", Date)
 ], NFTToken.prototype, "sentAt", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Date)
+], NFTToken.prototype, "sentForMediaAt", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
 ], NFTToken.prototype, "alternativeMediaFiles", void 0);

@@ -15,6 +15,7 @@ export declare class NFTToken {
     owners: Owner[];
     metadataFetchError: string;
     sentAt: Date;
+    sentForMediaAt: Date;
     alternativeMediaFiles: any;
 }
 export declare type NFTTokensDocument = NFTToken & Document;
