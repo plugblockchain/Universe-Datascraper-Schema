@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NFTCollectionSchema = exports.NFTCollection = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
+const types_1 = require("./types");
 let NFTCollection = class NFTCollection {
 };
 __decorate([
@@ -18,7 +19,7 @@ __decorate([
     __metadata("design:type", String)
 ], NFTCollection.prototype, "contractAddress", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, trim: true, index: true }),
+    (0, mongoose_1.Prop)({ required: true, trim: true, index: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)
 ], NFTCollection.prototype, "tokenType", void 0);
 __decorate([

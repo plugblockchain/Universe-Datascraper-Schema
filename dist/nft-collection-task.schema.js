@@ -31,7 +31,7 @@ __decorate([
     __metadata("design:type", Number)
 ], NFTCollectionTask.prototype, "endBlock", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, index: true, required: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "tokenType", void 0);
 __decorate([

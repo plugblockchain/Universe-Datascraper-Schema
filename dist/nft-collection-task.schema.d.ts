@@ -6,7 +6,7 @@ export declare class NFTCollectionTask {
     contractAddress: string;
     startBlock: number;
     endBlock: number;
-    tokenType: 'ERC721' | 'ERC1155';
+    tokenType: string;
     status: MessageStatus;
 }
 export declare type NFTCollectionTaskDocument = NFTCollectionTask & Document;

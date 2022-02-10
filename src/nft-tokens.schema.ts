@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { SupportedTokenTypes } from './types';
 
 export class Owner {
   @Prop({ trim: true, index: true, required: true })
@@ -20,7 +21,7 @@ export class NFTToken {
   @Prop({ trim: true, index: true, required: true })
   public tokenId: string;
 
-  @Prop({ index: true, required: true, enum: ['ERC721', 'ERC1155'] })
+  @Prop({ index: true, required: true, enum: SupportedTokenTypes })
   public tokenType: string;
 
   @Prop()
