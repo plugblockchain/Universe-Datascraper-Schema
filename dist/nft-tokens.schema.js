@@ -55,10 +55,6 @@ __decorate([
 ], NFTToken.prototype, "firstOwner", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], NFTToken.prototype, "latestOwner", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
 ], NFTToken.prototype, "owners", void 0);
 __decorate([

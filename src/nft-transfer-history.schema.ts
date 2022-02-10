@@ -20,14 +20,20 @@ export class NFTTransferHistory {
   public to: string;
 
   @Prop()
-  public value: string;
+  public tokenId: string;
 
   @Prop()
-  public erc721Tokenid: string;
+  public value: string;
 
+  //Original data: only for ERC721
+  @Prop()
+  public erc721TokenId: string;
+
+  //Original data: only for erc1155 { tokenId, value }
   @Prop({ type: 'object' })
   public erc1155Metadata: any;
 
+  //Original data: only for CryptoPunks { punkIndex }
   @Prop({ type: 'object' })
   public cryptopunks: any;
 

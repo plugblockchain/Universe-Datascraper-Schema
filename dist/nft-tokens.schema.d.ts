@@ -12,7 +12,6 @@ export declare class NFTToken {
     externalDomainViewUrl: string;
     metadata: any;
     firstOwner: string;
-    latestOwner: string;
     owners: Owner[];
     metadataFetchError: string;
     sentAt: Date;

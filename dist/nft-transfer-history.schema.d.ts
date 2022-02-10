@@ -6,8 +6,9 @@ export declare class NFTTransferHistory {
     hash: string;
     from: string;
     to: string;
+    tokenId: string;
     value: string;
-    erc721Tokenid: string;
+    erc721TokenId: string;
     erc1155Metadata: any;
     cryptopunks: any;
     category: string;
