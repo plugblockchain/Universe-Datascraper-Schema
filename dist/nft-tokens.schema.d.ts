@@ -17,7 +17,7 @@ export declare class NFTToken {
     sentAt: Date;
     sentForMediaAt: Date;
     alternativeMediaFiles: any;
-    refresh: boolean;
+    needToRefresh: boolean;
 }
 export declare type NFTTokensDocument = NFTToken & Document;
 export declare const NFTTokensSchema: SchemaFactory;

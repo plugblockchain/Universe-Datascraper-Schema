@@ -51,7 +51,7 @@ export class NFTToken {
   public alternativeMediaFiles: any;
 
   @Prop({ default: false })
-  public refresh: boolean;
+  public needToRefresh: boolean;
 }
 
 export type NFTTokensDocument = NFTToken & Document;

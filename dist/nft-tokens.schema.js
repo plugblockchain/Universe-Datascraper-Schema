@@ -76,7 +76,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
-], NFTToken.prototype, "refresh", void 0);
+], NFTToken.prototype, "needToRefresh", void 0);
 NFTToken = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-tokens' })
 ], NFTToken);
