@@ -13,10 +13,16 @@ export class NFTCollection {
   @Prop({ required: true })
   public createdAtBlock: number;
 
-  @Prop({ trim: true })
+  @Prop()
+  public firstProcessedBlock: number;
+
+  @Prop()
+  public lastProcessedBlock: number; 
+
+  @Prop()
   public sentAt: Date;
 
-  @Prop({ trim: true })
+  @Prop()
   public firstCheckAt: Date;
 }
 

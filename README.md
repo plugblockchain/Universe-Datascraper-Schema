@@ -4,3 +4,6 @@
 - add or update schema
 - run `npm run build`
 - commit all code changes including newly generated `dist`
+- go to your project where want to use the new schema
+- run rm -rf node_modules
+- run npm install

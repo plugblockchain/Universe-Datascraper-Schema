@@ -27,11 +27,19 @@ __decorate([
     __metadata("design:type", Number)
 ], NFTCollection.prototype, "createdAtBlock", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true }),
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTCollection.prototype, "firstProcessedBlock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTCollection.prototype, "lastProcessedBlock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], NFTCollection.prototype, "sentAt", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true }),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], NFTCollection.prototype, "firstCheckAt", void 0);
 NFTCollection = __decorate([
