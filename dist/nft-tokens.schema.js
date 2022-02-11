@@ -73,6 +73,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
 ], NFTToken.prototype, "alternativeMediaFiles", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], NFTToken.prototype, "needToRefresh", void 0);
 NFTToken = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-tokens' })
 ], NFTToken);
