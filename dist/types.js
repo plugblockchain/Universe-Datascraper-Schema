@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SupportedTokenTypes = exports.MessageStatus = void 0;
+exports.MediaFileType = exports.SupportedTokenTypes = exports.MessageStatus = void 0;
 var MessageStatus;
 (function (MessageStatus) {
     MessageStatus["sent"] = "sent";
@@ -15,4 +15,12 @@ var SupportedTokenTypes;
     SupportedTokenTypes["ERC1155"] = "ERC1155";
     SupportedTokenTypes["CryptoPunks"] = "CryptoPunks";
 })(SupportedTokenTypes = exports.SupportedTokenTypes || (exports.SupportedTokenTypes = {}));
+var MediaFileType;
+(function (MediaFileType) {
+    MediaFileType["Image"] = "image";
+    MediaFileType["Video"] = "video";
+    MediaFileType["Audio"] = "audio";
+    MediaFileType["Model"] = "model";
+    MediaFileType["Misc"] = "misc";
+})(MediaFileType = exports.MediaFileType || (exports.MediaFileType = {}));
 //# sourceMappingURL=types.js.map

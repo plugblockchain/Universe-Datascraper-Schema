@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTTokensSchema = exports.NFTToken = exports.Owner = void 0;
+exports.NFTTokensSchema = exports.NFTToken = exports.AlternativeMediaFile = exports.Owner = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const types_1 = require("./types");
 class Owner {
@@ -27,6 +27,17 @@ __decorate([
     __metadata("design:type", Number)
 ], Owner.prototype, "value", void 0);
 exports.Owner = Owner;
+class AlternativeMediaFile {
+}
+__decorate([
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
+    __metadata("design:type", String)
+], AlternativeMediaFile.prototype, "url", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ trim: true, required: true, enum: types_1.MediaFileType }),
+    __metadata("design:type", String)
+], AlternativeMediaFile.prototype, "type", void 0);
+exports.AlternativeMediaFile = AlternativeMediaFile;
 let NFTToken = class NFTToken {
 };
 __decorate([
@@ -70,8 +81,8 @@ __decorate([
     __metadata("design:type", Date)
 ], NFTToken.prototype, "sentForMediaAt", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: Object }),
-    __metadata("design:type", Object)
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Array)
 ], NFTToken.prototype, "alternativeMediaFiles", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: false }),
