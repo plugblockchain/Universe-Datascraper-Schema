@@ -10,3 +10,10 @@ export declare enum SupportedTokenTypes {
     ERC1155 = "ERC1155",
     CryptoPunks = "CryptoPunks"
 }
+export declare enum MediaFileType {
+    Image = "image",
+    Video = "video",
+    Audio = "audio",
+    Model = "model",
+    Misc = "misc"
+}

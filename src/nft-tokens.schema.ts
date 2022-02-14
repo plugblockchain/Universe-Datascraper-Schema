@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { SupportedTokenTypes } from './types';
+import { MediaFileType, SupportedTokenTypes } from './types';
 
 export class Owner {
   @Prop({ trim: true, index: true, required: true })
@@ -11,6 +11,14 @@ export class Owner {
 
   @Prop({ required: true })
   value: number;
+}
+
+export class AlternativeMediaFile {
+  @Prop({ trim: true, required: true })
+  url: string;
+
+  @Prop({ trim: true, required: true, enum: MediaFileType })
+  type: string;
 }
 
 @Schema({ timestamps: true, collection: 'nft-tokens' })
@@ -47,8 +55,8 @@ export class NFTToken {
   @Prop()
   public sentForMediaAt: Date;
 
-  @Prop({ type: Object })
-  public alternativeMediaFiles: any;
+  @Prop()
+  public alternativeMediaFiles: AlternativeMediaFile[];
 
   @Prop({ default: false })
   public needToRefresh: boolean;

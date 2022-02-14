@@ -5,6 +5,10 @@ export declare class Owner {
     transactionHash: string;
     value: number;
 }
+export declare class AlternativeMediaFile {
+    url: string;
+    type: string;
+}
 export declare class NFTToken {
     contractAddress: string;
     tokenId: string;
@@ -16,7 +20,7 @@ export declare class NFTToken {
     metadataFetchError: string;
     sentAt: Date;
     sentForMediaAt: Date;
-    alternativeMediaFiles: any;
+    alternativeMediaFiles: AlternativeMediaFile[];
     needToRefresh: boolean;
 }
 export declare type NFTTokensDocument = NFTToken & Document;
